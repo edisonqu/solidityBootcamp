@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"homework2/bootcamp.sol": "BootcampContract"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"homework2/bootcamp.sol": {
+			"keccak256": "0x6c524226e12751080cae17854e98f6511a7dbbfa156283229c0dd78f85a3d7fe",
+			"license": "None",
+			"urls": [
+				"bzz-raw://4b07815dc9a1816094237b0bfab5230bca4c257cea4a3afae80a90473e9ec1e0",
+				"dweb:/ipfs/QmeynNqumnuurQkkn4GLaSJErUaPVugeEdHup27S8PuKww"
+			]
+		}
+	},
+	"version": 1
+}
