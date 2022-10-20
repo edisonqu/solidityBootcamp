@@ -5,7 +5,7 @@ pragma solidity 0.8.17;
 contract newContract {
     address owner;
 
-    constructor() public{
+    constructor() {
         owner = msg.sender;
     }
 
