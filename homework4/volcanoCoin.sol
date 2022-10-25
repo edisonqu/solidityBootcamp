@@ -2,23 +2,16 @@
 
 pragma solidity ^0.8.0;
 
-import "hardhat/console.sol";
 
-contract VolcanoCoin{
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+
+contract VolcanoCoin is Ownable{
     uint256 totalSupply = 10000;
 
-    address owner;
-
     constructor(){
-        owner = msg.sender;
-        holdings[owner] = totalSupply;
+        holdings[msg.sender] = totalSupply;
     }
-    // struct balances{
-    //     address addr;
-    //     uint256 amount;
-    // }
-
-    // balances giver;
 
     mapping(address => uint256) public holdings;
 
@@ -35,11 +28,6 @@ contract VolcanoCoin{
         return holdings[_user];
     }
 
-    modifier onlyOwner{
-        if(msg.sender == owner){
-            _;
-        }
-    }
 
     event currentSupply(uint256);
 
