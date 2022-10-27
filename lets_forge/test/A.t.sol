@@ -7,7 +7,7 @@ import "forge-std/Test.sol";
 import "forge-std/Vm.sol";
 
 // Contract under test
-import {A} from "../homework8/src/A.sol";
+import {A} from "../src/A.sol";
 
 contract ATest is Test{
     A private a;
