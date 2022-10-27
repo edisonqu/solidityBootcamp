@@ -27,7 +27,6 @@ contract ATest is Test{
          // HEVM_ADDRESS is a special reserved address for the VM
         emit log_address(HEVM_ADDRESS);
 
-
     }
 
     function test_GetValue() public {
