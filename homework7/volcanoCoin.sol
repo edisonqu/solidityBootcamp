@@ -26,7 +26,7 @@ contract VolcanoCoin is Ownable{
 
     event transferSuccess(uint256 indexed _amount, address indexed recipient);
 
-    function viewPayment(address _user) public view returns(address, uint256){
+    function viewPayments(address _user) public view returns(address, uint256){
         return (findPayment[_user].theRecipient, findPayment[_user].transferredAmount);
     }
 
@@ -37,7 +37,8 @@ contract VolcanoCoin is Ownable{
     function transfer (uint256 _amountTransferred, address _recipientAddress) public returns(uint256){
         holdings[msg.sender]= holdings[msg.sender] - _amountTransferred;
         holdings[_recipientAddress] = holdings[_recipientAddress] + _amountTransferred;
-        findPayment[msg.sender] = Payment(_recipientAddress, _amountTransferred);
+        // findPayment[msg.sender] = Payment(_recipientAddress, _amountTransferred);
+        recordPayment(msg.sender, _recipientAddress, _amountTransferred);
         emit transferSuccess(_amountTransferred,_recipientAddress);
         return holdings[_recipientAddress];
     }
