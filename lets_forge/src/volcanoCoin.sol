@@ -3,7 +3,8 @@
 pragma solidity ^0.8.0;
 
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+// import "openzeppelin/contracts/access/Ownable.sol";
+import "openzeppelin-contracts/access/Ownable.sol";
 
 contract VolcanoCoin is Ownable{
     uint256 totalSupply = 10000;

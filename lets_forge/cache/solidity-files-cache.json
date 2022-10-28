@@ -11,6 +11,88 @@
     ]
   },
   "files": {
+    "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1666910922801,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Ownable": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Ownable.sol/Ownable.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1666910923215,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "Context.sol/Context.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1666910927764,
       "contentHash": "962996f0e05d5218857a538a62d7c47e",
@@ -400,9 +482,52 @@
         }
       }
     },
+    "src/volcanoCoin.sol": {
+      "lastModificationDate": 1666921886090,
+      "contentHash": "083d4271dbd1d27a11fa448c1fe3d21b",
+      "sourceName": "src/volcanoCoin.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "VolcanoCoin": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "volcanoCoin.sol/VolcanoCoin.json"
+        }
+      }
+    },
     "test/A.t.sol": {
-      "lastModificationDate": 1666910077210,
-      "contentHash": "7036095897ff9ebc9bb4cc1ca343743d",
+      "lastModificationDate": 1666984908656,
+      "contentHash": "907e62de20ce1ae77e99bb3854e72853",
       "sourceName": "test/A.t.sol",
       "solcConfig": {
         "settings": {
@@ -446,6 +571,57 @@
       "artifacts": {
         "ATest": {
           "0.8.17+commit.8df45f5f.Darwin.appleclang": "A.t.sol/ATest.json"
+        }
+      }
+    },
+    "test/volcanoCoin.t.sol": {
+      "lastModificationDate": 1666986154341,
+      "contentHash": "297211257bdc78d2a319ec2e42fabf89",
+      "sourceName": "test/volcanoCoin.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Script.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/StdJson.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Test.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/Vm.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/console.sol",
+        "lib/openzeppelin-contracts/lib/forge-std/src/console2.sol",
+        "src/volcanoCoin.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "testingVolcanoCoin": {
+          "0.8.17+commit.8df45f5f.Darwin.appleclang": "volcanoCoin.t.sol/testingVolcanoCoin.json"
         }
       }
     }

@@ -10,9 +10,9 @@ import "forge-std/Vm.sol";
 import {VolcanoCoin} from "../src/volcanoCoin.sol";
 
 contract testingVolcanoCoin is Test{
-    VolcanoCoin private volcanoCoin;
+    VolcanoCoin volcanoCoin;
 
-    function setup(){
+    function setUp() public {
         volcanoCoin = new VolcanoCoin();
     }
 
@@ -27,8 +27,17 @@ contract testingVolcanoCoin is Test{
 
     }
 
-    function test_retrieveTotalSupply(){
-        assertTrue(volcanoCoin.retrieveTotalSupply == 10000);
+
+    // function test_balance(address _holder) public view returns(address){
+    //     address _owner = msg.sender;
+    //     assertTrue(volcanoCoin.balance(_holder) == _owner);
+
+    // }
+    function test_retrieveTotalSupply() public {
+        uint256 _initialSupply = 10000;
+        emit log_address(HEVM_ADDRESS);
+        assertTrue(volcanoCoin.retrieveTotalSupply() == 10000);
+
     }
 
 

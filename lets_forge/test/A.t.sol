@@ -27,6 +27,7 @@ contract ATest is Test{
          // HEVM_ADDRESS is a special reserved address for the VM
         emit log_address(HEVM_ADDRESS);
 
+
     }
 
     function test_GetValue() public {
@@ -38,7 +39,6 @@ contract ATest is Test{
         uint x = 123;
         a.store(x);
         assertTrue(a.retrieve() == 123);
-
     }
 
     function test_FuzzValue(uint _value) public {
