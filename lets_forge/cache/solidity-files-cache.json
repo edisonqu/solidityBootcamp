@@ -575,8 +575,8 @@
       }
     },
     "test/volcanoCoin.t.sol": {
-      "lastModificationDate": 1666986154341,
-      "contentHash": "297211257bdc78d2a319ec2e42fabf89",
+      "lastModificationDate": 1666988682229,
+      "contentHash": "4f162757cd9d09333629d211f855eb4e",
       "sourceName": "test/volcanoCoin.t.sol",
       "solcConfig": {
         "settings": {

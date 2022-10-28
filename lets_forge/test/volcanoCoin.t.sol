@@ -28,17 +28,23 @@ contract testingVolcanoCoin is Test{
     }
 
 
-    // function test_balance(address _holder) public view returns(address){
-    //     address _owner = msg.sender;
-    //     assertTrue(volcanoCoin.balance(_holder) == _owner);
-
-    // }
     function test_retrieveTotalSupply() public {
-        uint256 _initialSupply = 10000;
-        emit log_address(HEVM_ADDRESS);
         assertTrue(volcanoCoin.retrieveTotalSupply() == 10000);
+    }
+
+    function test_increaseTotalSupply() public {
+        volcanoCoin.increaseTotalSupply();
+
+        assertTrue(volcanoCoin.retrieveTotalSupply() == 11000);
+    }
+
+    function testFail_isOwner() public {
+        vm.prank(address(0));
+        volcanoCoin.increaseTotalSupply();
 
     }
+
+
 
 
 }
