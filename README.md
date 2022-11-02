@@ -1,2 +1,2 @@
 # solidityBootcamp
-All the stuff made / learned in Encode Club
+All the stuff made / learned in Encode Club. And projects made.
